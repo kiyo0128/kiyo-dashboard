@@ -18,7 +18,7 @@ function App() {
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
-    fetch('/data/todos.json')
+    fetch(`/data/todos.json?t=${Date.now()}`)
       .then(res => res.json())
       .then(json => {
         setData(json)
